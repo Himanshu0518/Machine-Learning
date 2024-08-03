@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Deploying ML model</title>
+
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.box {
+    margin-bottom: 15px;
+}
+
+.box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#butt {
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Diabetes Prediction System</h1>
+
+    <form method = 'POST' action='/result' id="boxes">
+
+        <div class="box">
+        <label for="Pregnancies">Pregnancies</label>
+        <input type="text" name="Pregnancies" required>   
+       </div>
+
+       <div class="box">
+        <label for="Glucose">Glucose</label>
+        <input type="text" name="Glucose" required>
+       </div>
+
+       <div class="box">
+        <label for="BloodPressure">BloodPressure</label>
+        <input type="text" name="BloodPressure" required> 
+    </div>
+       
+      <div class="box">
+        <label for="SkinThickness">SkinThickness</label>
+        <input type="text" name="skinThickness" required>
+    </div>
+
+    <div class="box">
+        <label for="Insulin">Insulin</label>
+        <input type="text" name="Insulin" required>
+    </div>
+    <div class="box" >
+        <label for="BMI">BMI</label>
+        <input type="text" name="BMI" required>
+    </div>
+    <div class="box">
+        <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction</label>
+        <input type="text" name="DiabetesPedigreeFunction" required>
+    </div>
+    <div class="box">
+        <label for="Age">Age</label>
+        <input type="text" name="Age" required>
+    </div>
+     <div class="box",id='butt'>
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+
+   <h1>{{prediction}}</h1> 
+</body>
+</html>
